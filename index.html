@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Detox Quiz for Students</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="icon">📱</div>
+            <h1>Digital Detox Quiz</h1>
+            <p class="subtitle">What kind of phone user are you?</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <p>Answer 5 simple questions about your phone habits and discover your digital profile!</p>
+            <button onclick="startQuiz()" class="btn start-btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress">
+                Question <span id="current-question">1</span>/10
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="answers-container" class="answers"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-icon" id="result-emoji"></div>
+            <h2 id="result-title"></h2>
+            <p id="result-description"></p>
+            <div class="score">Your score: <span id="score-value"></span>/15 points</div>
+            <button onclick="restartQuiz()" class="btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
