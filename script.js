@@ -1,3 +1,5 @@
+console.log("Digital Detox Quiz script loaded");
+
 const questions = [
     {
         question: "You are studying for an exam. Where is your phone?",
@@ -84,14 +86,16 @@ const questions = [
 let currentQuestionIndex = 0;
 let totalPoints = 0;
 
-function startQuiz() {
+// Объявляем функции глобально
+window.startQuiz = function() {
+    console.log("startQuiz called");
     currentQuestionIndex = 0;
     totalPoints = 0;
     showScreen('quiz-screen');
     showQuestion();
-}
+};
 
-function showQuestion() {
+window.showQuestion = function() {
     const question = questions[currentQuestionIndex];
     document.getElementById('question-text').textContent = question.question;
     document.getElementById('current-question').textContent = currentQuestionIndex + 1;
@@ -106,9 +110,9 @@ function showQuestion() {
         button.onclick = () => selectAnswer(answer.points);
         answersContainer.appendChild(button);
     });
-}
+};
 
-function selectAnswer(points) {
+window.selectAnswer = function(points) {
     totalPoints += points;
     currentQuestionIndex++;
     
@@ -117,16 +121,12 @@ function selectAnswer(points) {
     } else {
         showResult();
     }
-}
+};
 
-function showResult() {
+window.showResult = function() {
     let result;
-    const maxPoints = 20; // 10 вопросов × 2 балла максимум
-<<<<<<< HEAD
-
-=======
+    const maxPoints = 20;
     
->>>>>>> eb056895e79be21cd0814b4c7d796f2e53bc5c29
     if (totalPoints <= 7) {
         result = {
             title: "The Phone Lover 📱",
@@ -146,22 +146,24 @@ function showResult() {
             emoji: "🌱"
         };
     }
-
+    
     document.getElementById('result-title').textContent = result.title;
     document.getElementById('result-description').textContent = result.description;
     document.getElementById('result-emoji').textContent = result.emoji;
     document.getElementById('score-value').textContent = totalPoints + "/" + maxPoints;
     
     showScreen('result-screen');
-}
+};
 
-function showScreen(screenId) {
+window.showScreen = function(screenId) {
     document.querySelectorAll('.screen').forEach(screen => {
         screen.classList.remove('active');
     });
     document.getElementById(screenId).classList.add('active');
-}
+};
 
-function restartQuiz() {
+window.restartQuiz = function() {
     showScreen('start-screen');
-}
+};
+
+console.log("All functions defined");
