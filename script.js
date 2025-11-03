@@ -95,10 +95,10 @@ function showQuestion() {
     const question = questions[currentQuestionIndex];
     document.getElementById('question-text').textContent = question.question;
     document.getElementById('current-question').textContent = currentQuestionIndex + 1;
-
+    
     const answersContainer = document.getElementById('answers-container');
     answersContainer.innerHTML = '';
-
+    
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.className = 'answer-btn';
@@ -111,7 +111,7 @@ function showQuestion() {
 function selectAnswer(points) {
     totalPoints += points;
     currentQuestionIndex++;
-
+    
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
@@ -122,7 +122,11 @@ function selectAnswer(points) {
 function showResult() {
     let result;
     const maxPoints = 20; // 10 вопросов × 2 балла максимум
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> eb056895e79be21cd0814b4c7d796f2e53bc5c29
     if (totalPoints <= 7) {
         result = {
             title: "The Phone Lover 📱",
