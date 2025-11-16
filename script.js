@@ -1,84 +1,84 @@
-console.log("Digital Detox Quiz - Social Project Loaded");
+console.log("Digital Balance Quiz - Online Learning Version");
 
 const questions = [
     {
-        question: "You are studying for an exam. Where is your phone?",
+        question: "During online classes, where is your phone?",
         answers: [
-            { text: "On the table, next to my books", points: 1 },
-            { text: "In my bag or in another room", points: 2 },
-            { text: "In my hand, I check it every few minutes", points: 0 }
+            { text: "In my hand, I check it during lectures", points: 0 },
+            { text: "On the table, but I try not to touch it", points: 1 },
+            { text: "In another room or turned off", points: 2 }
         ]
     },
     {
-        question: "You are waiting for a friend who is late. What do you do?",
+        question: "How do you handle notifications during study time?",
         answers: [
-            { text: "I start scrolling through social media", points: 0 },
-            { text: "I listen to music or read a news article", points: 1 },
-            { text: "I just watch people or think about my day", points: 2 }
+            { text: "I check them immediately", points: 0 },
+            { text: "I check during breaks", points: 1 },
+            { text: "I turn them off while studying", points: 2 }
         ]
     },
     {
-        question: "Where is your phone when you sleep?",
+        question: "Where do you charge your phone at night?",
         answers: [
-            { text: "On my bed or under my pillow", points: 0 },
-            { text: "On the nightstand next to me", points: 1 },
-            { text: "On the other side of the room or in another room", points: 2 }
+            { text: "Next to my bed", points: 0 },
+            { text: "In the room but not near bed", points: 1 },
+            { text: "In another room", points: 2 }
         ]
     },
     {
-        question: "You are having lunch with friends. Your phone is:",
+        question: "What's your first activity in the morning?",
         answers: [
-            { text: "On the table, and I check it often", points: 0 },
-            { text: "In my pocket. I use it only to show a photo", points: 1 },
-            { text: "In my bag, and I don't look at it", points: 2 }
+            { text: "Check phone notifications", points: 0 },
+            { text: "Morning routine, then check phone", points: 1 },
+            { text: "Start the day without phone for 30+ minutes", points: 2 }
         ]
     },
     {
-        question: "How do you feel if you forget your phone at home?",
+        question: "How do you feel when you forget your phone?",
         answers: [
-            { text: "Very anxious. I go back to get it", points: 0 },
-            { text: "A little uncomfortable, but it's okay", points: 1 },
-            { text: "Free and relaxed", points: 2 }
+            { text: "Anxious and uncomfortable", points: 0 },
+            { text: "A bit uneasy but manageable", points: 1 },
+            { text: "Completely fine and free", points: 2 }
         ]
     },
     {
-        question: "What is the first thing you do in the morning?",
+        question: "How often do you check your phone during online meetings?",
         answers: [
-            { text: "Check my phone for messages and notifications", points: 0 },
-            { text: "Get out of bed, wash my face, and then check my phone", points: 1 },
-            { text: "Do my morning routine without my phone for the first 30 minutes", points: 2 }
+            { text: "Constantly throughout", points: 0 },
+            { text: "Only during less important parts", points: 1 },
+            { text: "Rarely or never", points: 2 }
         ]
     },
     {
-        question: "You are watching a movie. How often do you check your phone?",
+        question: "What do you do during short breaks between online classes?",
         answers: [
-            { text: "Very often, I can't stop", points: 0 },
-            { text: "Only during boring parts", points: 1 },
-            { text: "I put it on silent mode and don't check it", points: 2 }
+            { text: "Scroll through social media", points: 0 },
+            { text: "Check messages quickly", points: 1 },
+            { text: "Stretch, drink water, or rest eyes", points: 2 }
         ]
     },
     {
-        question: "You have free time. What is your favorite activity?",
+        question: "How do you manage your screen time in the evening?",
         answers: [
-            { text: "Browsing TikTok or Instagram", points: 0 },
-            { text: "Watching a movie or playing a game on my phone", points: 1 },
-            { text: "Going for a walk, reading a book, or meeting friends", points: 2 }
+            { text: "Use phone until bedtime", points: 0 },
+            { text: "Stop 30 minutes before sleep", points: 1 },
+            { text: "No screens 1+ hours before sleep", points: 2 }
         ]
     },
     {
-        question: "Your phone battery is at 10%. What do you do?",
+        question: "When doing online homework, how focused are you?",
         answers: [
-            { text: "Panic and look for a charger immediately", points: 0 },
-            { text: "Feel a bit stressed, but it's not a big problem", points: 1 },
-            { text: "It's okay, I can charge it later", points: 2 }
+            { text: "Constantly distracted by phone", points: 0 },
+            { text: "Some distractions but mostly focused", points: 1 },
+            { text: "Completely focused, phone away", points: 2 }
         ]
     },
     {
-        question: "You need to concentrate on reading. What do you do?",
+        question: "How do you use your phone during family time?",
         answers: [
-            { text: "I try to read, but notifications distract me", points: 0 },
-            { text: "I turn on 'Do Not Disturb' mode", points: 1 },
-            { text: "I put my phone in another room before I start", points: 2 }
+            { text: "Use it while talking to family", points: 0 },
+            { text: "Check occasionally but stay present", points: 1 },
+            { text: "Keep it away to be fully present", points: 2 }
         ]
     }
 ];
@@ -88,7 +88,7 @@ let totalPoints = 0;
 
 // Main Functions
 window.startQuiz = function() {
-    console.log("Starting Digital Detox Quiz");
+    console.log("Starting Digital Balance Quiz");
     currentQuestionIndex = 0;
     totalPoints = 0;
     showScreen('quiz-screen');
@@ -129,22 +129,22 @@ window.showResult = function() {
     
     if (totalPoints <= 7) {
         result = {
-            title: "The Phone Lover 📱",
-            description: "Your phone is the center of your daily routine. Don't worry - small changes can make a big difference in your focus and studies!",
-            emoji: "❤️",
+            title: "Digital Explorer 📱",
+            description: "Your phone is a big part of your daily life. With some mindful adjustments, you can find better balance and improve your focus during online studies!",
+            emoji: "📱",
             level: "low"
         };
     } else if (totalPoints <= 14) {
         result = {
-            title: "The Balanced User ⚖️",
-            description: "You have a good balance but sometimes get distracted. With a few adjustments, you can optimize your phone usage for better academic performance.",
+            title: "Balanced User ⚖️",
+            description: "You have a good relationship with technology but there's room for optimization. Small changes can enhance your online learning experience!",
             emoji: "⚖️",
             level: "medium"
         };
     } else {
         result = {
-            title: "The Digital Detox Master 🌱",
-            description: "Excellent! You're in control of your technology. Share your habits with friends and help others achieve digital balance.",
+            title: "Mindful Master 🌱",
+            description: "Excellent! You've mastered digital balance. You use technology intentionally without letting it control your life. Share your wisdom with others!",
             emoji: "🌱",
             level: "high"
         };
@@ -163,31 +163,31 @@ window.showResult = function() {
 window.showEducationalTips = function(level) {
     const tips = {
         low: [
-            "📵 No-phone meals - Focus on food and company",
-            "🔕 Turn off non-essential notifications for 4 hours daily",
-            "📚 Phone-free study sessions - Use Pomodoro technique",
-            "🌙 Charge phone in another room overnight",
-            "🚶‍♂️ Walk without phone - Enjoy surroundings",
-            "📖 Read physical books before sleep",
-            "🎯 Set app time limits for social media"
+            "🎯 Study Mode: Turn on 'Do Not Disturb' during online classes",
+            "📵 Phone-Free Zones: Keep phone away during study sessions",
+            "🌙 Night Routine: Charge phone in another room overnight",
+            "⏰ Scheduled Checks: Designate specific times for social media",
+            "🚶 Digital Breaks: Take walks without your phone",
+            "📚 Alternative Activities: Read physical books instead of scrolling",
+            "🎧 Focus Music: Use instrumental music instead of video content"
         ],
         medium: [
-            "⏰ Designated phone times - Check only at specific hours",
-            "🎓 Phone in bag during lectures - Better concentration",
-            "📱 Delete one distracting app for a week",
-            "👥 Phone-free social meetings - Quality time with friends",
-            "🌅 Morning routine without phone - First 30 minutes",
-            "📊 Track screen time weekly - Set reduction goals",
-            "🎮 Replace phone time with hobbies or sports"
+            "🔄 App Limits: Set daily time limits for distracting apps",
+            "🎓 Focus Sessions: Use Pomodoro technique (25 min focus, 5 min break)",
+            "📊 Screen Time Review: Check weekly usage and set reduction goals",
+            "👥 Quality Time: Phone-free meals with family/friends",
+            "🌅 Morning Clarity: First hour without screens",
+            "💤 Sleep Hygiene: No screens 1 hour before bedtime",
+            "🏃 Active Alternatives: Replace screen time with exercise"
         ],
         high: [
-            "🌟 Mentor others - Share your digital balance tips",
-            "📱 Organize phone-free events with friends",
-            "💡 Create personal digital detox challenges",
-            "🎯 Teach phone hygiene to classmates",
-            "📚 Start a study group with phone-free rules",
-            "🌱 Lead by example - Show benefits of digital minimalism",
-            "🚀 Innovate new ways to stay productive offline"
+            "🌟 Digital Mentor: Share balance tips with classmates",
+            "📱 Intentional Usage: Plan phone usage instead of mindless scrolling",
+            "💡 Creative Projects: Use saved time for hobbies or learning",
+            "🎯 Deep Work: Schedule 2-hour phone-free work sessions",
+            "🌿 Digital Minimalism: Regular app cleanup and decluttering",
+            "🤝 Community Building: Organize offline activities with peers",
+            "🚀 Skill Development: Learn new skills with extra time gained"
         ]
     };
     
@@ -215,11 +215,11 @@ window.restartQuiz = function() {
 };
 
 window.shareQuiz = function() {
-    const url = "https://safin3010-commits.github.io/EnglishQuiz";
+    const url = window.location.href;
     if (navigator.share) {
         navigator.share({
-            title: 'Digital Detox Quiz',
-            text: 'Check your phone habits and get personalized detox tips!',
+            title: 'Digital Balance Quiz',
+            text: 'Discover your digital habits and get personalized balance tips!',
             url: url
         });
     } else {
@@ -229,4 +229,4 @@ window.shareQuiz = function() {
     }
 };
 
-console.log("Digital Detox Quiz initialized successfully");
+console.log("Digital Balance Quiz initialized successfully");
