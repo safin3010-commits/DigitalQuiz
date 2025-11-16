@@ -51,10 +51,20 @@ h1 {
 }
 
 /* Features Styles */
+.problem-info {
+    text-align: center;
+}
+
+.problem-info h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
 .features {
     display: flex;
     justify-content: space-around;
-    margin: 25px 0;
+    margin: 30px 0;
 }
 
 .feature-item {
@@ -64,8 +74,8 @@ h1 {
 }
 
 .feature-icon {
-    font-size: 2em;
-    margin-bottom: 8px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .feature-text {
@@ -78,7 +88,7 @@ h1 {
     color: #5d6d7e;
     font-size: 1.1em;
     line-height: 1.5;
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* Quiz Styles */
