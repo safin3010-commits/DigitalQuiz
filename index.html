@@ -1,75 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Balance Quiz</title>
     <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
         }
+        
         .container {
             background: white;
-            padding: 40px;
             border-radius: 20px;
-            text-align: center;
+            padding: 40px;
             max-width: 500px;
+            width: 100%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
         }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        .subtitle { color: #7f8c8d; margin-bottom: 30px; }
-        h2 { color: #2c3e50; margin-bottom: 20px; }
+        
+        .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+        }
+        
         .features {
             display: flex;
             justify-content: space-around;
             margin: 30px 0;
         }
-        .feature { text-align: center; }
-        .feature span { display: block; }
-        .icon { font-size: 2em; margin-bottom: 5px; }
+        
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 8px;
+        }
+        
+        .feature-text {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .problem-description {
+            color: #5d6d7e;
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        
         .btn {
             background: #3498db;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 18px 40px;
             border-radius: 10px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             cursor: pointer;
-            margin-top: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div style="font-size: 3em; margin-bottom: 15px;">📱</div>
+        <div class="icon">📱</div>
         <h1>Digital Balance Quiz</h1>
         <p class="subtitle">Find your perfect balance between screen time and real life</p>
         
         <h2>Why Digital Balance Matters?</h2>
         
         <div class="features">
-            <div class="feature">
-                <span class="icon">🎯</span>
-                <span>Better Focus</span>
+            <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span class="feature-text">Better Focus</span>
             </div>
-            <div class="feature">
-                <span class="icon">😴</span>
-                <span>Quality Sleep</span>
+            <div class="feature-item">
+                <span class="feature-icon">😴</span>
+                <span class="feature-text">Quality Sleep</span>
             </div>
-            <div class="feature">
-                <span class="icon">⚡</span>
-                <span>More Energy</span>
+            <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <span class="feature-text">More Energy</span>
             </div>
         </div>
         
-        <p>In our digital world, finding balance is key to success and well-being.</p>
+        <p class="problem-description">
+            In our digital world, finding balance is key to success and well-being. 
+            Discover your habits and learn to use technology mindfully.
+        </p>
         
-        <button class="btn" onclick="alert('Quiz would start!')">Start Balance Quiz</button>
+        <button class="btn" onclick="startQuiz()">Start Balance Quiz</button>
     </div>
+
+    <script>
+        function startQuiz() {
+            alert('Quiz would start here! This is the centered version.');
+        }
+    </script>
 </body>
 </html>
